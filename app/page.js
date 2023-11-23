@@ -7,8 +7,8 @@ import { useState } from "react";
 // import useLocalStorage from "./js/storage";
 
 export default function Home() {
-  const [auth, setAuth] = useState(false);
-  const [dark, setDark] = useState(false);
+  const [auth, setAuth] = useState(true);
+  const [dark, setDark] = useState(true);
 
   const handleTheme = () => {
     setDark((s) => !s);
@@ -28,7 +28,10 @@ export default function Home() {
             className="text-2xl m-4 text-yellow-600"
           />
         ) : (
-          <FontAwesomeIcon icon={faMoon} className="text-2xl m-4 text-gray-600" />
+          <FontAwesomeIcon
+            icon={faMoon}
+            className="text-2xl m-4 text-gray-600"
+          />
         )}
       </button>
     </main>
